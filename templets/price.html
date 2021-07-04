@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gobinda Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+     
+     html{
+  scroll-behavior: smooth;
+}
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+a{ text-decoration: none;}
+a:hover{text-decoration: none;}
+li{list-style: none;}
+
+p{
+   font-size : 0.9rem;
+   line-height: 1.6;
+   font-weight: 400;
+   color: #606060; 
+}
+h2{
+  font-size: 20px;
+  margin: 20px 0 15px 0;
+  font-weight: bold;
+  line-height: 1.1;
+  word-spacing: 4px;
+}
+@media screen and (max-width: 991.98px) {
+ .navbar{
+   backdrop-filter: blur(2px);
+   }
+
+  .nav-ul {
+    width: 100%;
+    flex-direction: column!important;
+    margin-top: 1rem;
+  }
+  .nav-ul li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.4)!important;
+  }
+  .nav-ul li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4)!important;
+  }
+  .nav-ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1)!important;
+  }
+  .nav-link::before,
+  .current::before {
+    display: none!important;
+  }
+  .nav-ul .close {
+    display: block2!important;
+  }
+  .navbar-toggler-icon{
+    width: 35px;
+    height: 5px;
+    background-color:rgb(241, 107, 107);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .navbar-toggler-icon {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .navbar-toggler-icon {opacity: 0;}
+  
+  .change .navbar-toggler-icon {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+.form-inline  
+.form-control {
+   width: 100%;
+}
+}
+/*----end-----*/
+.header{
+    width: 100%;
+   
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}/*----initilize the blue tone---*/
+.header:before{
+    content : "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    opacity: .4;
+    z-index: -1;
+    
+}
+.navbar:before{
+    content : "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #16c9fc ;
+}
+.nav-item a{
+    color: #fff!important;
+    font-weight: bold;
+}
+.header-section{
+    width: 100%;
+    height:inherit;
+    color: white;
+    text-align: center;
+    position: relative;
+
+}
+.nav-link,
+.current {
+  position: relative;
+}
+.nav-link,
+.current {
+  position: relative;
+}
+.nav-link::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 50%;
+  height: 2px;
+  background-color:rgb(240, 72, 72);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s;
+}
+.nav-link:hover::before {
+    transform: scaleX(1);
+  }
+.current::before {
+    transform: scaleX(1);
+} /*----for the button left color shift--*/
+.btn {
+    display: inline-block;
+    
+    font-size: 17px;
+    font-weight: 700;
+    color: white!important;
+    border: 2px solid rgb(240, 72, 72) ;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .btn2 {
+    background-color: transparent;
+    overflow: hidden;
+    padding: 17px;
+  }
+  
+  .btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 99.5%;
+    height: 100%;
+    background-color:var(--pink);
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all 0.4s;
+  }
+  
+  .btn:hover::before {
+    transform: translateX(0);
+    
+  }
+  .priceingHead{
+      margin-bottom: 78px;
+      
+  }
+  .price{
+      width: 100%;
+      padding: 50px;
+      position: relative;
+  }
+  
+  .money{
+     font-size: 40px;
+     line-height: 1;
+     color: #606060; 
+  }
+ .card {
+     transition: 0.4s ease;
+ }
+ .card-header{
+     font-size: 1.6rem;
+     font-weight: bold;
+     background: #fff;
+     padding: 25px 9;
+     background-color: deepskyblue;
+ }
+ .card-body{
+     padding: 30px 0px!important;
+
+ }
+ .card-body li{
+     margin: 10px 0;
+     font-weight: 400;
+     font-size: 15px;
+     line-height: 1.6;
+     color: #606060;
+ }
+ .card-footer{
+     background:  white;
+     padding: 30px 0px;
+     
+ }
+ .card-footer a{
+     border: 1px solid #50d1c0;
+     background: #fff;
+     color: #50d1c0;
+     border-radius: 21px;
+     text-decoration: none;
+     
+     padding-top: 8px;
+     padding-bottom: 8px ;
+     padding-left:22px;
+     padding-right: 22px;
+
+ }
+ .card-footer a:hover{
+     color: #50d1c0;
+     background: #fff;
+     text-decoration: none;
+     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+ }
+ .card:hover{
+     transform: translateY(-20px);
+     box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+
+ }
+ .card:hover .card-header .card:hover .money{
+     color : #50d1c0;
+ }
+ .card-second{
+     transform: translateY(-20px);
+     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+ }
+
+ .btn {
+    display: inline-block;
+    
+    font-size: 17px;
+    font-weight: 700;
+    color: white!important;
+    border: 2px solid rgb(240, 72, 72) ;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .btn2 {
+    background-color: transparent;
+    overflow: hidden;
+    padding: 17px;
+  }
+  
+  .btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 99.5%;
+    height: 100%;
+    background-color:var(--pink);
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all 0.4s;
+  }
+  
+  .btn:hover::before {
+    transform: translateX(0);
+    
+  }
+  .contactus{
+     width: 100%;
+     height: 100vh;
+     padding: 80px 0;
+     position: relative;
+  }
+ 
+  .contact-footer {
+    background-color: #16c9f6;
+    padding-top: 69px;
+    padding-bottom: 69px;
+  }
+  
+  .contact {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .contact i{
+  color: black;
+  font-size: 25px;
+  border: 2px solid rgb(240, 72, 72);
+  font-size: 26px;
+  padding: 13px;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  margin: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+  }
+  
+  .contact i:hover {
+    transform: translateY(-1rem);
+  }
+  
+  .contact h2 {
+    font-size: 5rem;
+    font-size: 52px;
+    color:black;
+  }
+  .copyright{
+  background: rgb(0, 0, 0);
+  padding-bottom: 1px;
+    padding-top: 15px;
+ }
+ .logo{
+      margin-top: -81px;
+      margin-bottom: -88px;
+      margin-left: -14px;
+       }
+
+ @media screen and (max-width: 600px){
+.contact {
+    flex-direction: column;
+}
+ }
+ @media screen and (max-width: 600px){
+.contact > * {
+    margin: 3rem 0;
+}
+}
+    </style>
+</head>
+<body>
+    
+    <div class = "header " id = "Firstheader" >
+        <nav class="navbar navbar-expand-lg ">
+            <div class = "container-fluid text-uppercase">
+            <a class="navbar-brand font-weight-bold text-white" href="/"><img src="images/logo_200x200 (1).png " class="logo"></a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon ">
+                <span class="navbar-toggler-icon ">
+                  <span class="navbar-toggler-icon ">
+                </span>
+              </span>
+              </span>
+              
+            </button>
+            <div class="collapse navbar-collapse nav-ul" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto ">
+                <li class="nav-item active">
+                  <a class="nav-link  current" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/price">price</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+              </ul> 
+              <form class="form-inline my-2 my-lg-0 pl-2">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn media my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+    </div>
+
+
+        <section class="price" id = "priceid">
+            <div class="container headings test-center">
+              <h1 class ="text-center font-weight-bold priceingHead">OUR BEST PRICING</h1>
+            </div>
+            <div class="container">
+                <div class = "row">
+                    <div class = "col-lg-4 col-12">
+                        <div class="card text-center">
+                            <div class="card-header">BASIC</div>
+                            <div class="card-body">
+                                <li>$<span class = "money">20</span>/website</li>
+                                <li>Responsive Website</li>
+                                <li>Domain name</li>
+                                <li>Mobile Friendly</li>
+                                <li>Coustomer Support 24/7</li>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">Purchase</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class = "col-lg-4 col-12">
+                        <div class="card text-center">
+                            <div class="card-header">STANDARD</div>
+                            <div class="card-body">
+                                <li>$<span class = "money">40</span>/website</li>
+                                <li>Responsive Website</li>
+                                <li>Domain name</li>
+                                <li>Mobile Friendly</li>
+                                <li>Coustomer Support 24/7</li>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">Purchase</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class = "col-lg-4 col-12">
+                        <div class="card text-center">
+                            <div class="card-header">PREMIUM</div>
+                            <div class="card-body">
+                                <li>$<span class = "money">60</span>/website</li>
+                                <li>Responsive Website</li>
+                                <li>Domain name</li>
+                                <li>Mobile Friendly</li>
+                                <li>Coustomer Support 24/7</li>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">Purchase</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <section class="contact-footer" >
+         <div class="container">
+           <div class="contact">
+             <!-- icons -->
+             <div class="contact-icon">
+               <i class="fa fa-facebook-f fa-2x"></i>
+               <i class="fa fa-twitter"></i>
+               <i class="fa fa-instagram"></i>
+               <i class="fa fa-github"></i>
+             </div>
+             <!-- text -->
+             <h2>Let's Talk?</h2>
+           
+             <!-- button -->
+             <a href="contact" class="btn btn2 ">Make an enquiry!</a>
+             </div>
+           </div>
+         </div>
+       </section>
+         <div class="container-fluid text-center copyright">
+           <p>2021 &copy; TechNstuff. All Rights Reserved</p>
+         </div>
+       </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha512-5WvZa4N7Jq3TVNCp4rjcBMlc6pT3lZ7gVxjtI6IkKW+uItSa+rFgtFljvZnCxQGj8SUX5DHraKE6Mn/4smK1Cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="jquery.counterup.min.js"></script>
+    </body>
+    </html>
